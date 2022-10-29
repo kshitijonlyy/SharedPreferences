@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Shared Preferences</string>
+    <string name="txtName">Name:</string>
+    <string name="etName">Enter Name</string>
+    <string name="txtRoll">Roll No.:</string>
+    <string name="etRoll">Enter Roll Number</string>
+    <string name="txtPrice">Price:</string>
+    <string name="etPrice">Enter Price (in decimals)</string>
+    <string name="txtColor">Select Color:</string>
+    <string name="rbRed">Red</string>
+    <string name="rbGreen">Green</string>
+    <string name="rbBlue">Blue</string>
+    <string name="txtApply">APPLY CHANGES</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

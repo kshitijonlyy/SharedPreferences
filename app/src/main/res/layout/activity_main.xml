@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginTop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.025" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.975" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginLeft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.025" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginRight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.975" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/btnApply"
+            app:layout_constraintEnd_toStartOf="@id/marginRight"
+            app:layout_constraintStart_toEndOf="@id/marginLeft"
+            app:layout_constraintTop_toBottomOf="@id/marginTop">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/txtName"
+                    android:textSize="@dimen/txtSize" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_weight="1"
+                    android:hint="@string/etName"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvRoll"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/txtRoll"
+                    android:textSize="@dimen/txtSize" />
+
+                <EditText
+                    android:id="@+id/etRoll"
+                    android:layout_weight="1"
+                    android:hint="@string/etRoll"
+                    android:inputType="number"
+                    android:maxLines="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/txtPrice"
+                    android:textSize="@dimen/txtSize" />
+
+                <EditText
+                    android:id="@+id/etPrice"
+                    android:layout_weight="1"
+                    android:hint="@string/etPrice"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvColor"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/txtColor"
+                    android:textSize="@dimen/txtSize" />
+
+                <RadioGroup
+                    android:id="@+id/rgColors"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbRed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rbRed" />
+
+                    <RadioButton
+                        android:id="@+id/rbGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rbGreen" />
+
+                    <RadioButton
+                        android:id="@+id/rbBlue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rbBlue" />
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/txtApply"
+            app:layout_constraintEnd_toStartOf="@id/marginRight"
+            app:layout_constraintStart_toEndOf="@id/marginLeft"
+            app:layout_constraintTop_toBottomOf="@id/table" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="com.kshitij.sharedpreferences.ColorFragment"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toStartOf="@id/marginRight"
+            app:layout_constraintStart_toEndOf="@id/marginLeft"
+            app:layout_constraintTop_toBottomOf="@id/btnApply" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
