@@ -146,16 +146,32 @@
             app:layout_constraintEnd_toStartOf="@id/marginRight"
             app:layout_constraintStart_toEndOf="@id/marginLeft"
             app:layout_constraintTop_toBottomOf="@id/table" />
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView"
-            android:name="com.kshitij.sharedpreferences.ColorFragment"
+   <Button
+            android:id="@+id/btnClear"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/txtClear"
+       android:onClick="clearPrefs"
             app:layout_constraintEnd_toStartOf="@id/marginRight"
             app:layout_constraintStart_toEndOf="@id/marginLeft"
             app:layout_constraintTop_toBottomOf="@id/btnApply" />
+
+        <View
+            android:id="@+id/colorFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@id/marginBottom"
+            app:layout_constraintEnd_toStartOf="@id/marginRight"
+            app:layout_constraintStart_toEndOf="@id/marginLeft"
+            app:layout_constraintTop_toBottomOf="@id/btnClear" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
